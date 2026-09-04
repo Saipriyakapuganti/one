@@ -3,8 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Nexus · edit</title>
-    <!-- Fonts: crisp + one serif accent -->
+    <title>Nexus · orange edit</title>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
@@ -14,17 +13,18 @@
             box-sizing: border-box;
         }
         :root {
-            --bg: #f4f2ed;
+            --bg: #f9f6f0;
             --card: #ffffff;
-            --ink: #1b1b2a;
-            --ink-light: #3d3d4a;
-            --ember: #d46a4a;
-            --ember-soft: #f0d6cc;
-            --muted: #787885;
-            --border-light: #e6e2da;
-            --radius: 20px;
-            --shadow: 0 6px 24px rgba(0, 0, 0, 0.03);
-            --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.05);
+            --ink: #1a1a24;
+            --ink-light: #3b3b4a;
+            --orange: #f25c32;
+            --orange-soft: #fde2d6;
+            --orange-glow: #f25c3222;
+            --muted: #7a7a8a;
+            --border-light: #eae5dc;
+            --radius: 24px;
+            --shadow: 0 6px 24px rgba(0, 0, 0, 0.02);
+            --shadow-hover: 0 18px 40px rgba(0, 0, 0, 0.04);
         }
         body {
             font-family: 'Outfit', system-ui, sans-serif;
@@ -37,13 +37,13 @@
             margin: 0 auto;
             padding: 0 20px;
         }
-        /* buttons – soft & unique */
+        /* buttons — orange pulse */
         .btn {
             display: inline-flex;
             align-items: center;
             gap: 8px;
             border: none;
-            padding: 12px 28px;
+            padding: 12px 30px;
             border-radius: 60px;
             font-weight: 600;
             font-size: 15px;
@@ -52,22 +52,24 @@
             transition: 0.2s;
             letter-spacing: 0.2px;
         }
-        .btn-ember {
-            background: var(--ember);
+        .btn-orange {
+            background: var(--orange);
             color: #fff;
+            box-shadow: 0 4px 12px rgba(242, 92, 50, 0.25);
         }
-        .btn-ember:hover {
-            background: #bc5a3e;
-            transform: scale(0.97);
+        .btn-orange:hover {
+            background: #d94e2a;
+            transform: scale(0.96);
+            box-shadow: 0 8px 20px rgba(242, 92, 50, 0.3);
         }
-        .btn-ghost {
-            background: rgba(255, 255, 255, 0.1);
+        .btn-ghost-light {
+            background: rgba(255, 255, 255, 0.08);
             backdrop-filter: blur(4px);
             color: #fff;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.15);
         }
-        .btn-ghost:hover {
-            background: rgba(255, 255, 255, 0.2);
+        .btn-ghost-light:hover {
+            background: rgba(255, 255, 255, 0.18);
         }
         .btn-outline-ink {
             background: transparent;
@@ -79,11 +81,11 @@
             color: #fff;
         }
 
-        /* header – minimal & airy */
+        /* header — clean, orange accent */
         header {
-            padding: 14px 0;
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(12px);
+            padding: 12px 0;
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(14px);
             border-bottom: 1px solid rgba(0, 0, 0, 0.02);
             position: sticky;
             top: 0;
@@ -96,23 +98,23 @@
         }
         .logo {
             font-weight: 800;
-            font-size: 22px;
-            letter-spacing: -0.5px;
+            font-size: 24px;
+            letter-spacing: -0.4px;
         }
         .logo i {
-            color: var(--ember);
+            color: var(--orange);
             margin-right: 6px;
         }
         .logo span {
-            color: var(--ember);
+            color: var(--orange);
         }
         .nav-links {
             display: flex;
-            gap: 8px;
+            gap: 6px;
             list-style: none;
         }
         .nav-links a {
-            padding: 8px 16px;
+            padding: 8px 18px;
             border-radius: 40px;
             font-weight: 500;
             font-size: 14px;
@@ -121,17 +123,17 @@
         }
         .nav-links a:hover,
         .nav-links a.active {
-            background: var(--ember-soft);
-            color: var(--ink);
+            background: var(--orange-soft);
+            color: var(--orange);
         }
         .header-actions {
             display: flex;
-            gap: 8px;
+            gap: 6px;
             align-items: center;
         }
         .icon-btn {
-            width: 42px;
-            height: 42px;
+            width: 44px;
+            height: 44px;
             border-radius: 60px;
             display: grid;
             place-items: center;
@@ -142,8 +144,8 @@
             border: none;
         }
         .icon-btn:hover {
-            background: var(--ember-soft);
-            color: var(--ink);
+            background: var(--orange-soft);
+            color: var(--orange);
         }
         .cart-badge {
             position: relative;
@@ -152,7 +154,7 @@
             position: absolute;
             top: -4px;
             right: -4px;
-            background: var(--ember);
+            background: var(--orange);
             color: #fff;
             font-size: 11px;
             font-weight: 700;
@@ -172,8 +174,8 @@
             transition: 0.2s;
         }
         .search-bar:focus-within {
-            border-color: var(--ember);
-            box-shadow: 0 0 0 3px rgba(212, 106, 74, 0.08);
+            border-color: var(--orange);
+            box-shadow: 0 0 0 4px rgba(242, 92, 50, 0.08);
         }
         .search-bar input {
             border: none;
@@ -186,7 +188,7 @@
         }
         .search-bar button {
             border: none;
-            background: var(--ember);
+            background: var(--orange);
             color: #fff;
             border-radius: 60px;
             width: 38px;
@@ -195,85 +197,102 @@
             transition: 0.2s;
         }
         .search-bar button:hover {
-            background: #bc5a3e;
+            background: #d94e2a;
         }
         .mobile-toggle {
             display: none;
             background: none;
             border: none;
-            font-size: 22px;
+            font-size: 24px;
+            color: var(--ink);
         }
 
-        /* hero – fluid & warm */
+        /* hero — warm orange gradient */
         .hero {
-            background: var(--ink);
+            background: linear-gradient(145deg, #1f1f2e, #14141e);
             border-radius: var(--radius);
-            margin: 24px 0 0;
-            padding: 60px 48px;
-            background-image: radial-gradient(circle at 80% 20%, #3d3d5a, #14141f);
+            margin: 20px 0 0;
+            padding: 64px 48px;
             position: relative;
             overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            right: -80px;
+            bottom: -80px;
+            width: 460px;
+            height: 460px;
+            background: radial-gradient(circle, var(--orange), transparent 70%);
+            opacity: 0.25;
+            border-radius: 50%;
+            pointer-events: none;
         }
         .hero::after {
             content: '';
             position: absolute;
-            right: -60px;
-            bottom: -60px;
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, var(--ember), transparent 70%);
-            opacity: 0.3;
+            left: -40px;
+            top: -40px;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, #f25c3222, transparent 70%);
             border-radius: 50%;
+            pointer-events: none;
         }
         .hero-content {
             position: relative;
             z-index: 2;
-            max-width: 600px;
+            max-width: 580px;
         }
         .hero .badge {
             display: inline-block;
-            background: rgba(212, 106, 74, 0.2);
-            color: var(--ember-soft);
-            padding: 4px 18px;
+            background: rgba(242, 92, 50, 0.2);
+            color: var(--orange-soft);
+            padding: 4px 20px;
             border-radius: 60px;
             font-size: 13px;
             font-weight: 600;
-            letter-spacing: 0.4px;
+            letter-spacing: 0.5px;
+            border: 1px solid rgba(242, 92, 50, 0.15);
         }
         .hero h1 {
             font-family: 'Quicksand', sans-serif;
             font-weight: 700;
-            font-size: 44px;
+            font-size: 48px;
             color: #fff;
             line-height: 1.1;
-            margin: 12px 0 10px;
+            margin: 14px 0 12px;
+        }
+        .hero h1 i {
+            color: var(--orange);
+            font-style: normal;
         }
         .hero p {
             color: rgba(255, 255, 255, 0.7);
-            font-size: 16px;
-            max-width: 460px;
-            margin-bottom: 24px;
+            font-size: 17px;
+            max-width: 440px;
+            margin-bottom: 28px;
         }
         .hero-actions {
             display: flex;
-            gap: 12px;
+            gap: 14px;
             flex-wrap: wrap;
         }
 
         /* sections */
         .section {
-            padding: 48px 0;
+            padding: 52px 0;
         }
         .section-header {
             display: flex;
             justify-content: space-between;
             align-items: flex-end;
-            margin-bottom: 28px;
+            margin-bottom: 30px;
             flex-wrap: wrap;
         }
         .section-header h2 {
             font-weight: 700;
-            font-size: 26px;
+            font-size: 28px;
             letter-spacing: -0.3px;
         }
         .section-header .sub {
@@ -282,7 +301,7 @@
             margin-top: 2px;
         }
         .section-header a {
-            color: var(--ember);
+            color: var(--orange);
             font-weight: 600;
             font-size: 14px;
             display: flex;
@@ -290,16 +309,16 @@
             gap: 6px;
         }
 
-        /* categories – soft tiles */
+        /* categories */
         .cat-grid {
             display: grid;
             grid-template-columns: repeat(6, 1fr);
-            gap: 16px;
+            gap: 18px;
         }
         .cat-card {
             background: var(--card);
             border-radius: var(--radius);
-            padding: 22px 8px;
+            padding: 24px 8px;
             text-align: center;
             box-shadow: var(--shadow);
             transition: 0.2s;
@@ -307,24 +326,24 @@
             cursor: default;
         }
         .cat-card:hover {
-            border-color: var(--ember-soft);
-            transform: translateY(-4px);
+            border-color: var(--orange-soft);
+            transform: translateY(-6px);
             box-shadow: var(--shadow-hover);
         }
         .cat-card .icon {
-            background: var(--ember-soft);
-            width: 52px;
-            height: 52px;
+            background: var(--orange-soft);
+            width: 56px;
+            height: 56px;
             border-radius: 60px;
             display: grid;
             place-items: center;
-            margin: 0 auto 10px;
-            font-size: 22px;
-            color: var(--ember);
+            margin: 0 auto 12px;
+            font-size: 24px;
+            color: var(--orange);
             transition: 0.2s;
         }
         .cat-card:hover .icon {
-            background: var(--ember);
+            background: var(--orange);
             color: #fff;
         }
         .cat-card h4 {
@@ -340,7 +359,7 @@
         .prod-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
+            gap: 22px;
         }
         .prod-card {
             background: var(--card);
@@ -353,12 +372,12 @@
             flex-direction: column;
         }
         .prod-card:hover {
-            border-color: var(--ember-soft);
-            transform: translateY(-6px);
+            border-color: var(--orange-soft);
+            transform: translateY(-8px);
             box-shadow: var(--shadow-hover);
         }
         .prod-card .img-wrap {
-            background: #f0ede8;
+            background: #f3ede6;
             aspect-ratio: 1/1;
             position: relative;
             overflow: hidden;
@@ -367,47 +386,47 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: 0.25s;
+            transition: 0.3s;
         }
         .prod-card:hover .img-wrap img {
-            transform: scale(1.04);
+            transform: scale(1.05);
         }
         .prod-card .badge {
             position: absolute;
-            top: 12px;
-            left: 12px;
-            background: var(--ember);
+            top: 14px;
+            left: 14px;
+            background: var(--orange);
             color: #fff;
-            padding: 3px 14px;
+            padding: 4px 16px;
             border-radius: 60px;
             font-size: 11px;
             font-weight: 700;
             letter-spacing: 0.4px;
         }
         .prod-card .badge.sale {
-            background: #b48b5a;
+            background: #c97d3a;
             color: #fff;
         }
         .prod-card .wish {
             position: absolute;
-            top: 12px;
-            right: 12px;
-            background: rgba(255, 255, 255, 0.85);
+            top: 14px;
+            right: 14px;
+            background: rgba(255, 255, 255, 0.88);
             backdrop-filter: blur(4px);
             border-radius: 60px;
-            width: 36px;
-            height: 36px;
+            width: 38px;
+            height: 38px;
             border: none;
             font-size: 16px;
             color: var(--muted);
             transition: 0.2s;
         }
         .prod-card .wish:hover {
-            color: var(--ember);
+            color: var(--orange);
             background: #fff;
         }
         .prod-card .body {
-            padding: 16px 18px 10px;
+            padding: 16px 18px 8px;
             flex: 1;
         }
         .prod-card .body .cat {
@@ -415,17 +434,18 @@
             color: var(--muted);
             text-transform: uppercase;
             font-weight: 600;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.6px;
         }
         .prod-card .body h5 {
             font-weight: 600;
-            font-size: 15px;
+            font-size: 16px;
             margin: 4px 0 6px;
             line-height: 1.2;
         }
         .prod-card .body .price {
             font-weight: 700;
-            font-size: 18px;
+            font-size: 19px;
+            color: var(--orange);
         }
         .prod-card .body .old {
             color: var(--muted);
@@ -435,7 +455,7 @@
             font-weight: 400;
         }
         .prod-card .body .stars {
-            color: #c9a64c;
+            color: #d4a13e;
             font-size: 14px;
             letter-spacing: 2px;
         }
@@ -450,7 +470,7 @@
         }
         .prod-card .footer .add {
             width: 100%;
-            padding: 10px;
+            padding: 12px;
             border-radius: 60px;
             background: var(--ink);
             color: #fff;
@@ -464,23 +484,24 @@
             gap: 8px;
         }
         .prod-card .footer .add:hover {
-            background: var(--ember);
+            background: var(--orange);
         }
         .prod-card .footer .add.added {
-            background: #5f8b7a;
+            background: #4f8b7a;
         }
 
-        /* deal – asymmetric */
+        /* deal */
         .deal-wrap {
             display: flex;
             background: var(--card);
             border-radius: var(--radius);
             overflow: hidden;
             box-shadow: var(--shadow);
+            border: 1px solid var(--border-light);
         }
         .deal-wrap .deal-img {
-            flex: 0 0 45%;
-            background: #ddd8d0;
+            flex: 0 0 44%;
+            background: #ddd6cc;
             min-height: 280px;
         }
         .deal-wrap .deal-img img {
@@ -489,15 +510,15 @@
             object-fit: cover;
         }
         .deal-wrap .deal-content {
-            padding: 36px 40px;
+            padding: 36px 44px;
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
         .deal-wrap .deal-content .tag {
-            background: #e5d3b0;
-            color: var(--ink);
-            padding: 4px 16px;
+            background: var(--orange-soft);
+            color: var(--orange);
+            padding: 4px 18px;
             border-radius: 60px;
             font-weight: 700;
             font-size: 12px;
@@ -506,7 +527,7 @@
             margin-bottom: 8px;
         }
         .deal-wrap .deal-content h3 {
-            font-size: 28px;
+            font-size: 30px;
             font-weight: 700;
             margin-bottom: 4px;
         }
@@ -515,38 +536,39 @@
             margin-bottom: 14px;
         }
         .deal-wrap .deal-content .big-price {
-            font-size: 30px;
+            font-size: 32px;
             font-weight: 800;
+            color: var(--orange);
         }
         .deal-wrap .deal-content .big-price .old {
             font-size: 20px;
             font-weight: 400;
             color: var(--muted);
             text-decoration: line-through;
-            margin-left: 10px;
+            margin-left: 12px;
         }
         .deal-wrap .deal-content .stock {
             font-size: 14px;
             margin: 4px 0 14px;
         }
         .deal-wrap .deal-content .stock strong {
-            color: var(--ember);
+            color: var(--orange);
         }
         .timer-grid {
             display: flex;
-            gap: 10px;
-            margin: 10px 0 18px;
+            gap: 12px;
+            margin: 12px 0 20px;
         }
         .timer-box {
             background: var(--ink);
             color: #fff;
-            padding: 8px 14px;
-            border-radius: 14px;
-            min-width: 60px;
+            padding: 8px 16px;
+            border-radius: 16px;
+            min-width: 64px;
             text-align: center;
         }
         .timer-box .num {
-            font-size: 22px;
+            font-size: 24px;
             font-weight: 700;
         }
         .timer-box .label {
@@ -555,10 +577,10 @@
             text-transform: uppercase;
         }
 
-        /* testimonials – scroll */
+        /* testimonials */
         .testi-scroll {
             display: flex;
-            gap: 18px;
+            gap: 20px;
             overflow-x: auto;
             padding: 8px 2px 16px;
             scroll-snap-type: x mandatory;
@@ -567,20 +589,25 @@
             height: 4px;
         }
         .testi-scroll::-webkit-scrollbar-thumb {
-            background: var(--ember-soft);
+            background: var(--orange-soft);
             border-radius: 20px;
         }
         .testi-card {
-            flex: 0 0 300px;
+            flex: 0 0 310px;
             background: var(--card);
             border-radius: var(--radius);
-            padding: 24px;
+            padding: 26px;
             box-shadow: var(--shadow);
             scroll-snap-align: start;
+            border: 1px solid transparent;
+            transition: 0.2s;
+        }
+        .testi-card:hover {
+            border-color: var(--orange-soft);
         }
         .testi-card .stars {
-            color: #c9a64c;
-            font-size: 15px;
+            color: #d4a13e;
+            font-size: 16px;
             letter-spacing: 2px;
             margin-bottom: 6px;
         }
@@ -596,8 +623,8 @@
             align-items: center;
         }
         .testi-card .author img {
-            width: 40px;
-            height: 40px;
+            width: 44px;
+            height: 44px;
             border-radius: 60px;
             object-fit: cover;
             background: #ddd;
@@ -611,20 +638,33 @@
             color: var(--muted);
         }
 
-        /* newsletter – simple */
+        /* newsletter — orange touch */
         .newsletter {
             background: var(--ink);
             border-radius: var(--radius);
-            padding: 40px 48px;
+            padding: 44px 52px;
             color: #fff;
             display: flex;
             flex-wrap: wrap;
             align-items: center;
             justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+        }
+        .newsletter::before {
+            content: '';
+            position: absolute;
+            right: -60px;
+            top: -60px;
+            width: 260px;
+            height: 260px;
+            background: radial-gradient(circle, var(--orange), transparent 70%);
+            opacity: 0.12;
+            border-radius: 50%;
         }
         .newsletter .text h3 {
             font-weight: 700;
-            font-size: 24px;
+            font-size: 26px;
         }
         .newsletter .text p {
             opacity: 0.7;
@@ -633,13 +673,15 @@
             display: flex;
             gap: 10px;
             flex-wrap: wrap;
-            max-width: 420px;
+            max-width: 440px;
             flex: 1;
+            position: relative;
+            z-index: 2;
         }
         .newsletter input {
             flex: 1;
             min-width: 180px;
-            padding: 12px 20px;
+            padding: 14px 22px;
             border-radius: 60px;
             border: none;
             background: rgba(255, 255, 255, 0.08);
@@ -651,31 +693,32 @@
             color: rgba(255, 255, 255, 0.4);
         }
         .newsletter input:focus {
-            outline-color: var(--ember);
+            outline-color: var(--orange);
             background: rgba(255, 255, 255, 0.14);
         }
         .newsletter .btn {
-            background: var(--ember);
+            background: var(--orange);
         }
         .newsletter .btn:hover {
-            background: #bc5a3e;
+            background: #d94e2a;
         }
         #newsletterMsg {
             width: 100%;
             margin-top: 8px;
             font-size: 14px;
+            color: var(--orange-soft);
         }
 
         /* footer */
         footer {
-            padding: 40px 0 24px;
+            padding: 44px 0 24px;
             border-top: 1px solid var(--border-light);
-            margin-top: 16px;
+            margin-top: 12px;
         }
         .footer-grid {
             display: grid;
             grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 30px;
+            gap: 32px;
             margin-bottom: 28px;
         }
         .footer-grid .brand p {
@@ -686,11 +729,11 @@
         .footer-grid .brand .socials {
             display: flex;
             gap: 8px;
-            margin-top: 12px;
+            margin-top: 14px;
         }
         .footer-grid .brand .socials a {
-            width: 38px;
-            height: 38px;
+            width: 40px;
+            height: 40px;
             border-radius: 60px;
             background: var(--border-light);
             display: grid;
@@ -699,12 +742,12 @@
             transition: 0.2s;
         }
         .footer-grid .brand .socials a:hover {
-            background: var(--ember);
+            background: var(--orange);
             color: #fff;
         }
         .footer-grid .col h5 {
             font-weight: 700;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             font-size: 15px;
         }
         .footer-grid .col ul {
@@ -719,7 +762,7 @@
             transition: 0.2s;
         }
         .footer-grid .col ul li a:hover {
-            color: var(--ember);
+            color: var(--orange);
         }
         .footer-bottom {
             text-align: center;
@@ -747,7 +790,7 @@
                 flex: 0 0 200px;
             }
             .hero h1 {
-                font-size: 34px;
+                font-size: 36px;
             }
         }
         @media (max-width: 768px) {
@@ -761,10 +804,10 @@
                 width: 90px;
             }
             .hero {
-                padding: 36px 24px;
+                padding: 40px 24px;
             }
             .hero h1 {
-                font-size: 28px;
+                font-size: 30px;
             }
             .cat-grid {
                 grid-template-columns: repeat(2, 1fr);
@@ -777,7 +820,7 @@
                 grid-template-columns: 1fr;
             }
             .newsletter {
-                padding: 28px 20px;
+                padding: 30px 22px;
                 flex-direction: column;
                 align-items: stretch;
                 text-align: center;
@@ -812,7 +855,7 @@
         <div class="container header-flex">
             <div style="display:flex;align-items:center;gap:12px;">
                 <button class="mobile-toggle" id="mobileToggle"><i class="fas fa-bars"></i></button>
-                <span class="logo"><i class="fas fa-leaf"></i>Nexus<span>.</span></span>
+                <span class="logo"><i class="fas fa-bolt"></i>Nexus<span>.</span></span>
             </div>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#" class="active">Home</a></li>
@@ -852,12 +895,12 @@
         <!-- hero -->
         <section class="container hero">
             <div class="hero-content">
-                <span class="badge"><i class="fas fa-sparkles"></i> fresh drop</span>
-                <h1>Edit your <br>everyday style</h1>
-                <p>Curated essentials — from tech to threads. Free delivery on first order.</p>
+                <span class="badge"><i class="fas fa-sparkles"></i> fresh orange drop</span>
+                <h1>Style that <i>pops</i> <br>with energy</h1>
+                <p>Curated essentials, bold accents. Free delivery on your first order.</p>
                 <div class="hero-actions">
-                    <button class="btn btn-ember" id="shopNow"><i class="fas fa-store"></i> Explore</button>
-                    <button class="btn btn-ghost" id="exploreDeals">Flash deals</button>
+                    <button class="btn btn-orange" id="shopNow"><i class="fas fa-store"></i> Explore</button>
+                    <button class="btn btn-ghost-light" id="exploreDeals">Flash deals</button>
                 </div>
             </div>
         </section>
@@ -897,7 +940,7 @@
                         <div class="timer-box"><div class="num" id="dealMinutes">00</div><div class="label">min</div></div>
                         <div class="timer-box"><div class="num" id="dealSeconds">00</div><div class="label">sec</div></div>
                     </div>
-                    <button class="btn btn-ember" id="buyDeal"><i class="fas fa-cart-plus"></i> Add to cart</button>
+                    <button class="btn btn-orange" id="buyDeal"><i class="fas fa-cart-plus"></i> Add to cart</button>
                 </div>
             </div>
         </section>
@@ -924,7 +967,7 @@
     <footer>
         <div class="container">
             <div class="footer-grid">
-                <div class="brand"><span class="logo" style="font-size:20px;"><i class="fas fa-leaf"></i>Nexus<span>.</span></span><p>Minimal · modern · made for you.</p><div class="socials"><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-youtube"></i></a></div></div>
+                <div class="brand"><span class="logo" style="font-size:20px;"><i class="fas fa-bolt"></i>Nexus<span>.</span></span><p>Minimal · modern · orange energy.</p><div class="socials"><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-youtube"></i></a></div></div>
                 <div class="col"><h5>Company</h5><ul><li><a href="#">About</a></li><li><a href="#">Careers</a></li><li><a href="#">Press</a></li></ul></div>
                 <div class="col"><h5>Support</h5><ul><li><a href="#">Help</a></li><li><a href="#">Shipping</a></li><li><a href="#">Returns</a></li></ul></div>
                 <div class="col"><h5>Legal</h5><ul><li><a href="#">Privacy</a></li><li><a href="#">Terms</a></li></ul></div>
@@ -946,8 +989,4 @@
         const PRODS = [
             { id: 1, title: 'iPhone 14 Pro', price: 1099, old: 1199, rating: 5, reviews: 128, badge: 'New', img: 'https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?auto=format&fit=crop&w=400&q=80', cat: 'Phones' },
             { id: 2, title: 'MacBook Pro 14"', price: 1999, old: 0, rating: 4, reviews: 86, badge: '', img: 'https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=400&q=80', cat: 'Laptops' },
-            { id: 3, title: 'Apple Watch S8', price: 349, old: 399, rating: 5, reviews: 214, badge: 'Sale', img: 'https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?auto=format&fit=crop&w=400&q=80', cat: 'Accessories' },
-            { id: 4, title: 'Nike Air Max 270', price: 150, old: 0, rating: 4, reviews: 53, badge: '', img: 'https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=400&q=80', cat: 'Footwear' },
-            { id: 5, title: 'Sony A7 IV', price: 2499, old: 0, rating: 5, reviews: 42, badge: 'New', img: 'https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=400&q=80', cat: 'Audio' },
-            { id: 6, title: 'Chanel No.5', price: 120, old: 0, rating: 5, reviews: 189, badge: '', img: 'https://images.unsplash.com/photo-1585386959984-a4155224a1ad?auto=format&fit=crop&w=400&q=80', cat: 'Accessories' },
-            { id: 7, title: 'Travel Backpack', price: 79, old: 99, rating: 4, reviews: 67, badge: 'Sale', img: 'https://images.unsplash.com/photo-1551232864-3f0890e580d9?auto=format&fit=crop&
+            { id: 3, title: 'Apple Watch S8', price: 349, old: 399, rating: 5, reviews: 214, badge: 'Sale', img: 'https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?auto=format&fit=crop&w=400&q=80', cat: 'Accessories'
